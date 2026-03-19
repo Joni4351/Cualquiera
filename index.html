@@ -1,12 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOCUMENTOSSS</title>
+  <meta charset="UTF-8">
+  <title>Mi Web Moderna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.05);
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: #cbd5f5;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: #cbd5f5;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 8px;
+      color: #0f172a;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>HOLA MI GENTECITA</h1>
-    <p>hola mi gentecita</p>
+
+  <header>
+    <h1>MiSitio</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Una web moderna 🔥</h2>
+      <p>Diseño limpio, rápido y listo para impresionar.</p>
+      <button class="btn">Empezar</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 - Hecho con estilo ✨
+  </footer>
+
 </body>
 </html>
