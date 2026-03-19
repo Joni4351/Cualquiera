@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Web Moderna</title>
+  <title>Web Moderna Pro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fuente moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -17,11 +17,10 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #fff;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      color: white;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      overflow-x: hidden;
     }
 
     header {
@@ -29,19 +28,23 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      backdrop-filter: blur(12px);
       background: rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     header h1 {
-      font-weight: 600;
-      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
     nav a {
-      color: #cbd5f5;
-      margin-left: 20px;
+      margin-left: 25px;
       text-decoration: none;
+      color: #cbd5f5;
       transition: 0.3s;
     }
 
@@ -50,53 +53,102 @@
     }
 
     .hero {
-      flex: 1;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      padding: 40px;
+      padding: 20px;
     }
 
     .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
       -webkit-background-clip: text;
       color: transparent;
+      animation: fadeIn 1s ease forwards;
     }
 
     .hero p {
-      color: #cbd5f5;
-      margin-bottom: 30px;
+      margin-top: 20px;
+      color: #94a3b8;
+      max-width: 500px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      animation: fadeIn 2s ease forwards;
     }
 
     .btn {
       padding: 12px 25px;
-      background: #38bdf8;
+      border-radius: 10px;
       border: none;
-      border-radius: 8px;
-      color: #0f172a;
-      font-weight: 600;
       cursor: pointer;
+      font-weight: 600;
       transition: 0.3s;
     }
 
-    .btn:hover {
+    .primary {
+      background: #38bdf8;
+      color: #020617;
+    }
+
+    .primary:hover {
       background: #0ea5e9;
-      transform: scale(1.05);
+      transform: translateY(-3px);
+    }
+
+    .secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+
+    .secondary:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .card {
+      margin-top: 60px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      max-width: 600px;
+      animation: fadeIn 2.5s ease forwards;
     }
 
     footer {
       text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
-      color: #94a3b8;
+      padding: 20px;
+      color: #64748b;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 600px) {
       .hero h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+      }
+
+      nav {
+        display: none;
       }
     }
   </style>
@@ -104,26 +156,33 @@
 
 <body>
 
-  <header>
-    <h1>MiSitio</h1>
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Servicios</a>
-      <a href="#">Contacto</a>
-    </nav>
-  </header>
+<header>
+  <h1>MiSitio</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Proyectos</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <div>
-      <h2>Una web moderna 🔥</h2>
-      <p>Diseño limpio, rápido y listo para impresionar.</p>
-      <button class="btn">Empezar</button>
-    </div>
-  </section>
+<section class="hero">
+  <h2>Diseño moderno de verdad 🚀</h2>
+  <p>Una web simple pero con estilo premium. Animaciones suaves, glassmorphism y estética actual.</p>
 
-  <footer>
-    © 2026 - Hecho con estilo ✨
-  </footer>
+  <div class="buttons">
+    <button class="btn primary">Empezar</button>
+    <button class="btn secondary">Ver más</button>
+  </div>
+
+  <div class="card">
+    <h3>🔥 Look profesional</h3>
+    <p>Este diseño mezcla minimalismo con efectos visuales modernos para que tu web se vea nivel startup.</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 - Hecho con flow ✨
+</footer>
 
 </body>
 </html>
